@@ -1,0 +1,8 @@
+build --remote_instance_name=projects/bazel-untrusted/instances/default_instance
+build --remote_executor=grpcs://remotebuildexecution.googleapis.com
+build --google_default_credentials
+build --host_platform=//:rbe_ubuntu1804_java11_platform
+build --platforms=//:rbe_ubuntu1804_java11_platform
+build --noremote_accept_cached
+
+build --experimental_allow_unresolved_symlinks
